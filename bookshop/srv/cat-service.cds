@@ -1,6 +1,7 @@
 using {sap.krc.bookshop as my} from '../db/schema';
 
 @path : '/browse'
+@impl : './my-service.js'
 service CatalogService {
 
     @readonly

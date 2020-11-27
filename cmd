@@ -5,7 +5,15 @@ cds help
 cds compile srv/say.cds --to json
 cds compile srv/say.cds --to sql
 cds compile srv/say.cds --to edmx
+cds compile srv/cat-service.cds --to hana
 cds watch
+cds deploy --to sqlite
+cds deploy --to sqlite:bookshop.db
+cds deploy --to hana
+CDS_ENV=production cds watch
+
+
+cf login
 
 
 git init

@@ -6,6 +6,11 @@ module.exports = (srv) => {
   // Use reflaction to get the csn defination  of Books
   const { Books } = cds.entities;
 
+  srv.before("*", (req) => {
+    console.debug(">>>", req.method, req.target.name);
+    // req.error(400, "Boo");
+  });
+
   //Add some discoount for  overstocked books
 
   srv.after("READ", "Books", (each) => {
