@@ -6,10 +6,12 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@jest/core": "^26.6.3",
     "@sap/cds": "^4",
     "express": "^4"
   },
   "devDependencies": {
+    "jest": "*",
     "sqlite3": "^5"
   },
   "scripts": {
