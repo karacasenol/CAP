@@ -22,7 +22,7 @@ entity Magazines : Products {
 entity Books : managed {
     key ID       : Integer;
         title    : localized String(111);
-        descr    : localized String(111);
+        descr    : localized String(1111);
         author   : Association to Authors;
         stock    : Integer;
         price    : Decimal(9, 2);

@@ -5,23 +5,24 @@ service CatalogService {
 
     @readonly
     entity Books  as
-                    /*
-                        select from my.Books {
-                            *,
-                            author.name as author
-                        }
-                        excluding {
-                            createdBy,
-                            modifiedBy
-                        };
-                        */
-                        select from my.Books {
-        *
-    }
-    excluding {
-        createdBy,
-        modifiedBy
-    };
+
+        select from my.Books {
+            *,
+            author.name as author
+        }
+        excluding {
+            createdBy,
+            modifiedBy
+        };
+    /*
+     select from my.Books {
+*
+}
+excluding {
+createdBy,
+modifiedBy
+};
+*/
 
     @requires_ : 'authenticated-user'
     @insertonly
