@@ -12,8 +12,19 @@ cds deploy --to sqlite:bookshop.db
 cds deploy --to hana
 CDS_ENV=production cds watch
 
-
 cf login
+cds add hana
+cds add hana -- force 
+cds build/all
+cf create-service hanatrial  hdi-shared bookshop-db
+cf push -f gen/db/
+cf push -f gen/srv/ --random-route
+
+cf target
+
+cds add mta 
+mbt build
+cf push mta_archives/????.mtar
 
 
 git init

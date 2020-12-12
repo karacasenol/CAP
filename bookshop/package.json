@@ -1,31 +1,20 @@
 {
-  "name": "bookshop",
-  "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
-  "license": "UNLICENSED",
-  "private": true,
-  "dependencies": {
-    "@jest/core": "^26.6.3",
-    "@sap/cds": "^4",
-    "express": "^4"
-  },
-  "devDependencies": {
-    "jest": "*",
-    "sqlite3": "^5"
-  },
-  "scripts": {
-    "start": "npx cds run"
-  },
-  "cds": {
-    "requires": {
-      "db": {
-        "kind": "sqlite",
-        "model": "*",
-        "credentials": {
-          "database": "bookshop.db"
-        }
-      }
+    "name": "bookshop",
+    "version": "1.0.0",
+    "description": "A simple CAP project.",
+    "repository": "<Add your repository here>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "@sap/cds": "^4",
+        "express": "^4",
+        "@sap/hana-client": "^2.4.177"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "npx cds run"
+    },
+    "cds": {
+       
     }
-  }
 }
